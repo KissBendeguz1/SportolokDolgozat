@@ -90,6 +90,38 @@
   },
   {
     "ContainingType": "Sportolo.Controllers.LekersezesekController",
+    "Method": "GetNameCompDesc",
+    "RelativePath": "api/Lekersezesek/egysportolo/id",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sportolo.Controllers.LekersezesekController",
+    "Method": "GetOsszesEredmeny",
+    "RelativePath": "api/Lekersezesek/eredmeny/id",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sportolo.Controllers.LekersezesekController",
     "Method": "GetNameEmiailByID",
     "RelativePath": "api/Lekersezesek/id",
     "HttpMethod": "GET",
@@ -102,6 +134,16 @@
         "IsRequired": false
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sportolo.Controllers.LekersezesekController",
+    "Method": "GetOsszesEredmeny",
+    "RelativePath": "api/Lekersezesek/osszeseredmeny",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   }
 ]

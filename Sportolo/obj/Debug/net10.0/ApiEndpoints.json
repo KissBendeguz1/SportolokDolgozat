@@ -1,0 +1,54 @@
+[
+  {
+    "ContainingType": "Sportolo.Controllers.EredmenyController",
+    "Method": "GetSportolo",
+    "RelativePath": "api/Eredmeny",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[Sportolo.Models.Eredmeny, Sportolo, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Sportolo.Controllers.EredmenyController",
+    "Method": "AddNewEredmeny",
+    "RelativePath": "api/Eredmeny",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "neweredmeny",
+        "Type": "Sportolo.Models.DTOs.AddNewEredmenyDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sportolo.Controllers.EredmenyController",
+    "Method": "GetEredmenyByID",
+    "RelativePath": "api/Eredmeny/id",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

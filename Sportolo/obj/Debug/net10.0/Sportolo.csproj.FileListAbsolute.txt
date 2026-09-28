@@ -34,3 +34,4 @@ C:\Users\kissb\Desktop\C#\WebApi\Sportolo\Sportolo\obj\Debug\net10.0\refint\Spor
 C:\Users\kissb\Desktop\C#\WebApi\Sportolo\Sportolo\obj\Debug\net10.0\Sportolo.pdb
 C:\Users\kissb\Desktop\C#\WebApi\Sportolo\Sportolo\obj\Debug\net10.0\Sportolo.genruntimeconfig.cache
 C:\Users\kissb\Desktop\C#\WebApi\Sportolo\Sportolo\obj\Debug\net10.0\ref\Sportolo.dll
+C:\Users\kissb\Desktop\C#\WebApi\Sportolo\Sportolo\obj\Debug\net10.0\Sportolo.sourcelink.json

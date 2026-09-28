@@ -37,8 +37,61 @@
   },
   {
     "ContainingType": "Sportolo.Controllers.EredmenyController",
+    "Method": "updateEredmeny",
+    "RelativePath": "api/Eredmeny",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "updateEredmeny",
+        "Type": "Sportolo.Models.DTOs.UpdateEredmenyDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sportolo.Controllers.EredmenyController",
     "Method": "GetEredmenyByID",
     "RelativePath": "api/Eredmeny/id",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sportolo.Controllers.EredmenyController",
+    "Method": "deleteEredmeny",
+    "RelativePath": "api/Eredmeny/id",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Sportolo.Controllers.LekersezesekController",
+    "Method": "GetNameEmiailByID",
+    "RelativePath": "api/Lekersezesek/id",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,

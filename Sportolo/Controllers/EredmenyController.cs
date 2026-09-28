@@ -74,17 +74,58 @@ namespace Sportolo.Controllers
         [HttpPost]
         public object AddNewEredmeny(AddNewEredmenyDto neweredmeny) {
             var connection = new MySqlConnection(ConnectionString);
-            var sql = @"INSERT INTO `eredmeny`(`competition`, `description`, `resulttime`, `updatetime`, `sportoloid`) VALUES ('@competition','@description','@resulttime','@updatetime','@sportoloid')";
-            var cmd = new MySqlCommand(sql, connection);
             connection.Open();
-            cmd.Parameters.AddWithValue("@competition", neweredmeny.Competition);
-            cmd.Parameters.AddWithValue("@description", neweredmeny.Description);
-            cmd.Parameters.AddWithValue("@resulttime", DateTime.Now);
-            cmd.Parameters.AddWithValue("@updatetime", DateTime.Now);
-            cmd.Parameters.AddWithValue("@sportoloid", neweredmeny.SportoloId);
+            var sql = @"INSERT INTO `eredmeny`(`competition`, `description`, `resulttime`, `updatetime`, `sportoloid`) VALUES (@comp,@desc,@rest,@updt,@sid);";
+            var cmd = new MySqlCommand(sql, connection);
+            cmd.Parameters.AddWithValue("@comp", neweredmeny.Competition);
+            cmd.Parameters.AddWithValue("@desc", neweredmeny.Description);
+            cmd.Parameters.AddWithValue("@rest", DateTime.Now);
+            cmd.Parameters.AddWithValue("@updt", DateTime.Now);
+            cmd.Parameters.AddWithValue("@sid", neweredmeny.SportoloId);
+
+            cmd.ExecuteNonQuery();
+
+
+            connection.Close();
+            return new { objectum = neweredmeny, message = "Sikeres felvétel" };
+        }
+
+        [HttpPut]
+
+        public object updateEredmeny([FromQuery] int id, UpdateEredmenyDTO updateEredmeny)
+        {
+            var connection = new MySqlConnection(ConnectionString);
+            connection.Open();
+
+            var sql = @"UPDATE `eredmeny` SET `competition`=@comp,`description`=@desc,`updatetime`=@updtime,`sportoloid`=@spid WHERE `id`=@id";
+
+            var cmd = new MySqlCommand(sql, connection);
+            cmd.Parameters.AddWithValue("@comp", updateEredmeny.Competition);
+            cmd.Parameters.AddWithValue("@desc", updateEredmeny.Description);
+
+            cmd.Parameters.AddWithValue("@updtime", DateTime.Now);
+            cmd.Parameters.AddWithValue("@spid", updateEredmeny.SportoloId);
+            cmd.Parameters.AddWithValue("@id", id);
             cmd.ExecuteNonQuery();
             connection.Close();
-            return new { objektum = neweredmeny, message = "Sikeres felvetel" };
+
+            return new { message = "sikeres frissites", resoult = updateEredmeny };
+        }
+
+        [HttpDelete("id")]
+        public object deleteEredmeny(int id) {
+
+            var connection = new MySqlConnection(ConnectionString);
+            connection.Open();
+
+            var sql = @"DELETE FROM `eredmeny` WHERE `id`=@id";
+
+            var cmd = new MySqlCommand(sql, connection);
+            cmd.Parameters.AddWithValue("@id", id);
+            cmd.ExecuteNonQuery();
+            connection.Close();
+
+            return new { message = "sikeres törlés" };
         }
     }
 }
